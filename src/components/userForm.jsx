@@ -18,34 +18,39 @@ const UserForm = ({ selectedUser, onSave, onCancel }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form_container">
-      <h2 >
+        <form onSubmit={handleSubmit} className="form_container">
+      <div className="heading-container">
+      <h2 className="heading">
         {selectedUser ? "Edit User" : "Add User"}
       </h2>
-      <div className="mb-4">
-        <label >Name</label>
+      </div>
+      <div className="mb-5 col-md-6">
+        <label className="input-label" >Name</label>
         <input
-          type="text"
+          type="text" 
           value={user.name}
+          placeholder="please enter a valid name"
           onChange={(e) => setUser({ ...user, name: e.target.value })}
         />
       </div>
-      <div className="mb-4">
-        <label>Email</label>
+      <div className="mb-4 mt-4">
+        <label className="input-label">Email</label>
         <input
           type="email"
           value={user.email}
+          placeholder="please enter a valid email"
           onChange={(e) => setUser({ ...user, email: e.target.value })}
         />
       </div>
       <div>
-        <button type="submit"
+        <button type="submit" className="save-button"
          >
           Save
         </button>
         {selectedUser && (
           <button
-            type="button"
+            type="button" 
+            className="cancel-button"
             onClick={() => {
               onCancel();
               setUser({ name: "", email: "" });
@@ -56,6 +61,7 @@ const UserForm = ({ selectedUser, onSave, onCancel }) => {
         )}
       </div>
     </form>
+    
   );
 };
 

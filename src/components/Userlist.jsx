@@ -28,8 +28,8 @@ const Userlist = ({UserData ,onEdit,onDelete}) => {
 // console.log(UserData,"user");
 
   return (
-     <div>
-      <h2 className='heading' >User List</h2>
+     <div className='bg-container'>
+      <h2 className='user-heading' >User List</h2>
       <div className='table-wrapper'>
       <table className='table-container'>
         <thead>
@@ -47,12 +47,13 @@ const Userlist = ({UserData ,onEdit,onDelete}) => {
               <td >{user.name}</td>
               <td >{user.email}</td>
               <td >
-                <button
+                <button className='edit-button'
+
                   onClick={() => onEdit(user)}
                 >
                   Edit
                 </button>
-                <button className="delete_button"
+                <button className="delete-button"
                   onClick={() => onDelete(user.id)}
                 >
                   Delete
@@ -68,7 +69,6 @@ const Userlist = ({UserData ,onEdit,onDelete}) => {
           <select
             value={limit}
             onChange={handleLimitChange}
-            className="limit-selector"
           >
             <option value={5}>5</option>
             <option value={10}>10</option>

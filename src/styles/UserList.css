@@ -1,14 +1,24 @@
-.heading{
-    color:blue;
+.user-heading{
+    color: blue;
+    font-weight: bold;
     font-family: Roboto;
+    font-style: oblique;
     font-size: 28px;
     margin : 20px
 }
-.delete_ button{
+.edit-button {
+    background-color: yellow;
+    margin-right : 10px;
     border-radius: 5px;
-    border-style : solid 1px black;
-    margin : 10px;
+    color : black;
+    width : 50px;
 
+}
+.delete-button{
+    border-radius: 5px;
+    background-color: red;
+    margin-left : 10px;
+    color : #ffffff;
 }
 
 .table-wrapper{
@@ -56,4 +66,21 @@ thead{
 
 .table-container thead tr:nth-child(even) {
     background: #483030;
+}
+
+.pagination-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin : 50px;
+}
+.pagination-info {
+    font-family: Roboto;
+    color : brown;
+}
+.pagination-button {
+    background-color: lightblue;
+    color : #483030;
+    margin-left: 10px;
+    margin-right: 10px;
 }
